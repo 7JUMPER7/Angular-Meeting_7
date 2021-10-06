@@ -1,0 +1,16 @@
+<div class="container">
+  <input id="filmTitle" class="form-control" type="text" placeholder="Введите название фильма">
+  <input class="btn btn-primary" type="submit" value="Найти" (click)="searchFilm()">
+
+  <div class="filmBox" [hidden]="filmHidden">
+    <div class="card mb-3">
+      <img class="card-img-top" src={{film.Poster}} alt={{film.Title}}>
+      <div class="card-body">
+        <h5 class="card-title">{{film.Title}}</h5>
+        <p class="card-text">{{film.Genre}}</p>
+        <p class="card-text"><small class="text-muted">{{film.Year}}</small></p>
+        <p class="card-text"><strong>Actors: </strong>{{film.Actors}}</p>
+      </div>
+    </div>
+  </div>
+</div>
